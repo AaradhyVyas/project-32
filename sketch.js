@@ -25,20 +25,20 @@ function draw(){
 
     // if conditions
 
-    if(backgroundImg){
-        background(backgroundImg);
-        }
+    // if(backgroundImg){
+    //     background(backgroundImg);
+    //     }
 
     if(hour>=04 && hour<=06){
     bg = "sunrise1.png";
     }else if(hour>=06 && hour<=08){
     bg = "sunrise2.png";
     }else if(hour>=23 && hour==00){
-        bg = "sunsrt10.png";
+        bg = "sunset10.png";
     }else if(hour==00 && hour<=03){
-        bg = "sunsrt11.png";
+        bg = "sunset11.png";
     }else{
-        bg = "sunsrt12.png";
+        bg = "sunset12.png";
     }
 
     Engine.update(engine);
@@ -57,14 +57,14 @@ async function getBackgroundImg(){
         var datetime = responseJSON.datetime;
         var hour = datetime.slice(11,13);
     
-        if(hour>=06 && hour<=06){
-        bg = "sprites/bg.png";
-        }
-        else{
-            bg = "sprites/bg2.jpg"
-        }
-        backgroundImg = loadImage(bg);
-        console.log(backgroundImg);
+    //     if(hour>=06 && hour<=06){
+    //     bg = "sprites/bg.png";
+    //     }
+    //     else{
+    //         bg = "sprites/bg2.jpg"
+    //     }
+    //     backgroundImg = loadImage(bg);
+    //      console.log(backgroundImg);
+    // }
     }
-
 }
